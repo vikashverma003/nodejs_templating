@@ -1,0 +1,30 @@
+<form action="/image_upload" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="name">Image Title</label>
+        <input type="text" id="name" placeholder="Name"
+               value="" name="name" required>
+    </div>
+    <div>
+        <label for="desc">Image Description</label>
+        <textarea id="desc" name="desc" value="" rows="2"
+                  placeholder="Description" required>
+        </textarea>
+    </div>
+    <br>   <br>   <br>
+
+    <div>
+        <label for="image">Upload Image</label>
+        <input type="file" id="image"
+               name="image" value="" multiple required>
+    </div>
+    <br>   <br>   <br>
+    <div>
+        <label for="image">Icon Image</label>
+        <input type="file" id="icon"
+               name="icon" value="" multiple required>
+    </div>
+    <br>
+    <div>
+        <input type="submit" name="submit" value="Add img" class="btn btn-primary">   
+    </div>
+</form>

@@ -1,0 +1,33 @@
+<%# views/pages/edit_image_data.ejs %>
+<% extend('../layouts/layout') %>
+        <form action="/edit_image_update/" method="post"  role="form" enctype="multipart/form-data">
+            <div>
+                <label for="name">Image Title</label>
+                <input type="text" id="name"  name="name" 
+                       value="<%= records.name %>" placeholder="Name">
+            </div>
+            <input type="hidden" name="id" value="<%= id %>">
+
+            <div>
+                <label for="desc">Image Description</label>
+                <textarea id="desc" name="desc"  rows="2" 
+                          value="<%= records.desc %>"  placeholder="Description"><%= records.desc %>
+                </textarea>
+            </div>
+            <div>
+                <label for="image">Upload Image</label>
+                <input type="file" id="image"
+                       name="image" value="" multiple >
+            </div>
+            <!-- <% var d=JSON.parse(records.img); 
+            d.forEach(function(data){ %>
+
+            <td><img src='./uploads/<%= data %>' style="width:80px; height:80px"></td>
+              <% }) %> -->
+
+
+            <div>
+                <button type="submit" name="submit" value="submit">Submit</button>
+            </div>
+        </form>
+    
